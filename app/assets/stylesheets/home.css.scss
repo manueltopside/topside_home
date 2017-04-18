@@ -1,0 +1,25 @@
+.pic-home-grid {
+    position: relative;
+    size: relative;
+    margin-bottom: 15px;
+    height: 200px;
+    width: 100%;
+}
+
+.home-inner-grid {
+    margin: -10px;
+}
+
+.home-grid-link {
+    font-size: 200%;
+    margin-top: 20px;
+    font-weight: 700;
+    border: none;
+    color: #3d4472;
+    &:hover {
+        color: 6f5868;
+        opacity: 0.75;
+        text-decoration: none;
+    }
+}
+

@@ -1,0 +1,26 @@
+<div class='container text-center'>
+    <h1>Impressum</h1>
+    <p>Wir sind foodtags.de. Exklusive Einkaufmöglichkeiten! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, architecto, impedit, fugiat pariatur non sed dolorem quae at aliquid minus repudiandae aut in quibusdam quidem earum beatae corporis. Fugit, blanditiis!</p>
+</div>
+
+
+<div class="container home-signup-links">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well">
+        <h2 class="text-center">Standard Mitgliedschaft</h2>
+        <h4>Umsonst Registrieren für die Stardard Mitgliedschaft in unserer Community</h4>
+        <br/>
+        <%= link_to "Sign up with Basic", new_user_registration_path(plan: Plan.find(1).id), class: "btn btn-primary btn-lg btn-block" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="well">
+        <h2 class ="text-center">Pro Membership</h2>
+        <h4>Registriere dich bei unserer Community für 10€/Monat um von allen Vorteilen zu profitieren</h4>
+        <br/>
+        <%= link_to "Sign up with Pro", new_user_registration_path(plan: Plan.find(2).id), class: "btn btn-success btn-lg btn-block" %>
+      </div>
+    </div>
+  </div>
+</div>
