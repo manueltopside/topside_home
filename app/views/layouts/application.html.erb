@@ -47,11 +47,6 @@
                     </li>
                     <li><%= link_to "Produkte", about_path %></li>
                     <li><%= link_to "Kontakt", new_contact_path %></li>
-                    <% if user_signed_in? %>
-                      <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn nav_login" %>
-                    <% else %>
-                      <%= link_to "Log In", new_user_registration_path(plan: Plan.find(1).id), class: "btn btn-default navbar-btn nav_login" %>
-                    <% end %>
                   </ul>
                 </div>
               </div>
@@ -76,20 +71,35 @@
     <div class="container">
 			<div class="footer_all">
 				<div class="col-md-4">
-					<%=image_tag("logo/logo.gif", size: "150x38", alt: "Example Image", class: "footer_logo")%>
+				  <%=image_tag("logo/logo.gif", size: "150x38", alt: "Example Image", class: "footer_logo")%>
+				  
  					<div class="footer_under_logo">
- 					<p>Wir haben das Ziel dich mit unseren Produkten und Stories beim Sport zu unterstützen. So fällt dir der Sport leichter und du hast noch mehr Spaß am Sport. <br><br>
- 					<strong>Topside</strong> - <strong>enjoy your sport.</strong></p>
+   					<p>Wir haben das Ziel dich mit unseren Produkten und Stories beim Sport zu unterstützen. So fällt dir der Sport leichter und du hast noch mehr Spaß am Sport. <br><br>
+   					<strong>Topside</strong> - <strong>enjoy your sport.</strong></p>
  					</div>
+ 					
+ 					<div class="impressum_footer">
+ 					  <%= link_to "Impressum", impressum_path %><br>
+ 					  <%= link_to "Erfahre mehr über Topside", about_path %><br>
+ 					</div>
+ 					
 					<address>
 						<strong>Adresse:</strong><br>
 						Kupferstraße 25<br>
 						70565 Stuttgart<br>
 					</address>
-						<abbr title="Telefon"><strong>Telefon:</strong></abbr> +49 176 470 233 42<br>
-						<abbr title="Email:"><strong>Email:</strong></abbr> Hi@topside.info
-					</div>
+						<abbr title="Telefon"><strong>Telefon:</strong></abbr> +49 <br>
+						<abbr title="Email:"><strong>Email:</strong></abbr> info@topside-sport.de <br>
+
+					<div class="unten_login">
+	          <% if user_signed_in? %>
+              <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-default navbar-btn nav_login" %>
+            <% else %>
+              <%= link_to "Log In", new_user_registration_path(plan: Plan.find(1).id), class: "btn btn-default navbar-btn nav_login" %>
+            <% end %>
+          </div>
 				</div>
+			</div>
 
 					<div class="col-md-4 col_last">
 
